@@ -38,7 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
     public function question()
     {
         return $this->hasMany(Question::class);
