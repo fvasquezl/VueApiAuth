@@ -11,6 +11,16 @@ use Symfony\Component\HttpFoundation\Response;
 class ReplyController extends Controller
 {
     /**
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('jwt', ['except' => ['index','show']]);
+    }
+
+    /**
      * Undocumented function
      *
      * @param Question $question
