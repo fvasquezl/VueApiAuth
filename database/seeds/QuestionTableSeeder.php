@@ -1,8 +1,9 @@
 <?php
 
+use App\Model\Question;
 use Illuminate\Database\Seeder;
 
-class ReplySeeder extends Seeder
+class QuestionTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,6 @@ class ReplySeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Question::class, 10)->create();
     }
 }
